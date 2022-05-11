@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+    <title>New Posting</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	</head>
+  <body>
+    <h1>Post a new job:</h1>
+    <form action="/jobs" method="post">
+      <label for="title">Job Title:</label>
+      <input type="text" name="title" id="title" class="form-control" required>
+      <label for="description">Job Description:</label>
+      <input type="text" name="description" id="description" class="form-control" required>
+      <label for="number">Contact Phone #:</label>
+      <input type="text" name="phoneNumber" id="title" class="form-control" required>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </body>
+<html

@@ -1,0 +1,28 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Job Postings</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  </head>
+  <body>
+    @using JobBoard.Models;
+
+    @if (Model.Count == 0)
+    {
+      <p>There are no jobs listed.</p>
+    }
+    <ul>
+      @foreach (Job job in Model)
+      {
+        <h5><li>Job Posting:</li></h5>
+        <li><a href="/jobs/@job.Id">@job.Title</a></li>
+        <li>Description: @job.Description</li>
+        <li>Contact #: @job.ContactNumber</li>
+      }
+    </ul>
+    <a href="/jobs/new">Add another job posting</a>
+    <a href="/">Home</a>
+
+  </body>
+</html>
